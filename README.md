@@ -21,6 +21,10 @@ $ cd spikebot
 $ cp config.js.example config.js
 $ $EDITOR config.js
 ```
+Then, install the packages
+```
+$ sudo npm install .
+```
 
 Then, start spikebot.js!
 
