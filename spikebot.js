@@ -73,7 +73,7 @@ bot.addListener('motd', function() {
 	if(this.config.password) {
 		var nickServListener = function(from, to, text) {
 			if(from == 'NickServ') {
-				if(text === 'Password accepted - you are now recognized.' || text === 'You are already identified.') {
+				if(text.lastIndexOf('You are now identified for',0)===0 || text === 'You are already identified.') {
 					console.log('Authenticated with NickServ.');
 					whenAuthenticated();
 					bot.removeListener('pm', nickServListener);
